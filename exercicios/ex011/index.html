@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em Html5</title>
+   <link rel="shortcut icon" href="../ex011/imagens/meu-logo001.png" type="image/x-icon">
+</head>
+<body>
+    <h1>Imagens Dinamicas</h1>
+    <p>Tente abrir esse site em varios dispositivos diferentes ou simplesmente aumente ou diminua do seu computador.</p>
+    <picture>
+        <source media="(max-width: 750px )" srcset="imagens/eu-p.jpg" type="image/jpg">
+        <source media="(max-width: 1050px )" srcset="imagens/eu-m.jpg" type="image/jpg">
+        <img src="imagens/eu-g.jpg" alt="imagem flexivel">
+    </picture>
+    <!--Importante que exista uma ordem entre os <source>, e na configuração acima, sejam os menores tamanhos para max-width e que os seguintes sejam maiores, de forma crescente. O último ítem dentro <picture> deve ser a imagem padrão-->
+    </picture>
+    <h1>Reproduzindo áudio </h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5!!</p>
+    <audio preload="metadata" controls loop>
+        <source src="midia/Snowy Peaks pt I - Chris Haugen.mp3" type="audio/mp3">
+        <p>Seu navegador não suporta áudio <a href="
+            midia/Snowy Peaks pt I - Chris Haugen.mp3" download="midia/Snowy Peaks pt I - Chris Haugen.mp3" type="audio/mp3"></a></p>
+    </audio>
+    <!--Importante!! Se possível, adicionar vários <source> com formatos diferentes do mesmo áudio. Na parte de cima, seu formato de áudio favorito. O restante só serão carregados caso o de cima falhe.-->
+</body>
+</html>

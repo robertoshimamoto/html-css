@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+
+        /*
+            #  = id
+            .  = class
+            :  = pseudo-class
+            :: = pseudo-element
+            >  = children
+        */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a { 
+             /*
+                    nessa declaração, para links inéditos, ou, não visitados, colocamos o texto em negrito (font-weigth: bold), removemos o sublinhado (text-decoration: none), e, colocamos na cor vermelha (color: red)
+            */
+            color: red;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:visited {
+            /*
+                    nessa declaração, para links já visitados, configuramos com a pseudo-classe :visited. Só alteramos a cor (color: red)
+            */
+            color: darkred;
+        }
+
+        a:hover {
+            /*
+                    nessa declaração, configuramos todos os links que, ao passarmos o mouse por cima (pseudo-classe :hover) o sublinhado aparece (text-decoration: underline)
+            */
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: yellow;
+        }
+        
+        .especial:hover {
+            /*
+                    nessa declaração, dizemos que o link da classe "especial" terá o fundo preto (background-color: black); perderá o sublinhado (text-decoration: none); e a cor da letra será branca (color: white), tudo isso quando o movermos o mouse sobre ele.
+            */
+            background-color: rgb(0, 0, 0);
+            text-decoration: none;
+            color: white;
+        }
+
+        .especial::before {
+            /*
+                    nessa declaração, vamos adicionar um símbolo antes (☛) e outro depois (☚) usando os pseudo-elementos ::before e ::after, respectivamente. 
+            */
+            content: " ☛";
+            font-weight: lighter;
+        }
+
+        .especial::after {
+            content: " ☚";
+            font-weight: lighter;
+        }
+    </style>
+</head>
+<body>
+    <h1>Personalizando links</h1>
+    <ul>
+        <li><a href="https://gustavoguanabara.github.io" target="_blank">Repositório Github</a></li>
+        <li><a href="https://youtube.com/cursoemvideo" target="_blank" class="especial">Canal do YouTube</a></li>
+        <li><a href="https://www.cursoemvideo.com" target="_blank" class="especial">Site do Curso em Vídeo</a></li>
+    </ul>
+</body>
+</html>
